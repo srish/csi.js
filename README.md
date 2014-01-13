@@ -29,3 +29,10 @@ would end up rendering like this:
 <h1>Hello, world!</h1>
 </body>
 ```
+
+from file
+======
+
+csi.js also works from the filesystem, enabling front end developers to splice HTML for back end implementations without the need of running a local HTTP server or copying files to a remote environment for testing to leverage server side includes.
+
+The only caveat is Chrome, which restricts access to local files via AJAX. To resolve this, simply add `--allow-file--access-from-files` to your Chrome runtime. All other modern browsers work on direct files without any hassle. csi.js also works fine from any web server, assuming you are following appropriate CORS policies.
